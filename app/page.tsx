@@ -1,95 +1,203 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import './page.css';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <header className="header">
+        <div className="search-header">
+          <img className="magnifying-glass"
+                    src="./media/magnifying-glass.svg" 
+                    alt="лупа"/>
+          <input type="search" 
+                      className="search"
+                      value="Найти"/>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="slider-main">
+          <img className="sad-face"
+                    src="./media/sad-face.svg"
+                    alt="sad face"/>
+          <div className="slider-background"></div>
+          <img className="smile-face"
+                    src="./media/smile-face.svg"
+                    alt="smile face"/>
+          </div>
+          <button className="header__button">
+               <img className="plus"
+                    src="./media/plus.svg" 
+                    alt="plus"/>
+               <img className="branch"
+                    src="./media/branch.svg" 
+                    alt="branch"/>
+          </button>
+      </header>
+     <main className="main">
+          <div className="arrows">
+               <div className="arrow-left">
+                    <img src="./media/arrow-right-circle.svg" alt="arrow"/>
+               </div>
+               <div className="arrow-right">
+                    <img src="./media/arrow-right-circle.svg" alt="arrow"/>
+               </div>
+          </div>
+          <section className="notify">
+               <div className="point-1">
+                    <div className="dot"></div>
+                    <div className="top-rectangl"></div>
+                    <dl className="point__dl">
+                        <dt className="point__dt">Владик</dt>
+                        <dd className="point__dd">Срочно поставьте в теплое место</dd>
+                    </dl>
+                    <img className="notify__plant"
+                         src="./media/notify-plant.svg" 
+                         alt="plant" />
+                    <img className="plant-face-sick" 
+                         src="./media/plant-face-sick.svg" 
+                         alt="plant face sick" />
+                    <img className="snow"
+                         alt="snow" 
+                         src="./media/snow.svg"/>
+                    <div className="icons">
+                         <img className="battery"
+                              src="./media/battery.svg" 
+                              alt="battery"/>
+                         <img className="fire"
+                              src="./media/fire.svg" 
+                              alt="fire"/>
+                         <img className="sunrise"
+                              src="./media/sunrise.svg" 
+                              alt="sunrise"/>
+                         <img className="drops"
+                              src="./media/drops.svg" 
+                              alt="drops"/>
+                    </div>
+               </div>
+               <div className="point-2">
+                    <div className="dot"></div>
+                    <div className="top-rectangl"></div>
+                    <dl className="point__dl">
+                         <dt className="point__dt">Коля</dt>
+                         <dd className="point__dd">Срочно поставьте в теплое место</dd>
+                    </dl>
+                    <img className="notify__plant"
+                         src="./media/notify-plant.svg" 
+                         alt="plant" />
+                    <img className="plant-face-sick" 
+                         src="./media/plant-face-sick.svg" 
+                         alt="plant face sick" />
+                    <img className="snow"
+                         alt="snow" 
+                         src="./media/snow.svg"/>
+                    <div className="icons">
+                         <img className="battery"
+                              src="./media/battery.svg" 
+                              alt="battery"/>
+                         <img className="fire"
+                              src="./media/fire.svg" 
+                              alt="fire"/>
+                         <img className="sunrise"
+                              src="./media/sunrise.svg" 
+                              alt="sunrise"/>
+                         <img className="drops"
+                              src="./media/drops.svg" 
+                              alt="drops"/>
+                    </div>
+               </div>
+          </section>
+          <section className="pots">
+               <div className="title">
+                    <h2>Мои растения</h2>
+               </div>
+               <div className="points">
+                    <div className="point-1">
+                         <div className="top"></div>
+                         <img className="pots__plant"
+                              src="./media/pots-plant.svg" 
+                              alt="plant" />
+                         <img className="pots__plant-face" 
+                              src="./media/pots-smile-face.svg" 
+                              alt="plant face" />
+                         <dl className="pots__dl">
+                              <dt className="pots__dt">Нина</dt>
+                              <dd className="pots__dd-1">Dracena Fr.</dd>
+                              <dd className="pots__dd-2">Полейте через 2 часа</dd>
+                         </dl>
+                         <div className="icons">
+                              <img className="fire"
+                                   src="./media/fire.svg"
+                                   alt="fire"></img>
+                              <img className="sunrise"
+                                   src="./media/sunrise.svg"
+                                   alt="sunrise"></img>
+                              <img className="drops"
+                                   src="./media/drops.svg"
+                                   alt="drops"></img>
+                              <img className="battery"
+                                   src="./media/battery.svg"
+                                   alt="battery"></img>
+                         </div>
+                         <div className="graf"></div>
+                    </div>
+                    <div className="point-2">
+                         <div className="top"></div>
+                         <img className="pots__plant"
+                              src="./media/pots-plant-1.svg" 
+                              alt="plant" />
+                         <img className="pots__plant-face" 
+                              src="./media/pots-smile-face.svg" 
+                              alt="plant face" />
+                         <dl className="pots__dl">
+                              <dt className="pots__dt">Таня</dt>
+                              <dd className="pots__dd-1">Dracena Fr.</dd>
+                              <dd className="pots__dd-2">Завтра поставьте в менее жаркое место</dd>
+                         </dl>
+                         <div className="icons">
+                              <img className="fire"
+                                   src="./media/fire.svg"
+                                   alt="fire"></img>
+                              <img className="sunrise"
+                                   src="./media/sunrise.svg"
+                                   alt="sunrise"></img>
+                              <img className="drops"
+                                   src="./media/drops.svg"
+                                   alt="drops"></img>
+                              <img className="battery"
+                                   src="./media/battery.svg"
+                                   alt="battery"></img>
+                         </div>
+                         <div className="graf"></div>
+                    </div>
+                    <div className="point-3">
+                         <div className="top"></div>
+                         <img className="pots__plant"
+                              src="./media/pots-plant.svg" 
+                              alt="plant" />
+                         <img className="pots__plant-face" 
+                              src="./media/pots-smile-face.svg" 
+                              alt="plant face" />
+                         <dl className="pots__dl">
+                              <dt className="pots__dt">Нина</dt>
+                              <dd className="pots__dd-1">Dracena Fr.</dd>
+                              <dd className="pots__dd-2">Полейте через 2 часа</dd>
+                         </dl>
+                         <div className="icons">
+                              <img className="fire"
+                                   src="./media/fire.svg"
+                                   alt="fire"></img>
+                              <img className="sunrise"
+                                   src="./media/sunrise.svg"
+                                   alt="sunrise"></img>
+                              <img className="drops"
+                                   src="./media/drops.svg"
+                                   alt="drops"></img>
+                              <img className="battery"
+                                   src="./media/battery.svg"
+                                   alt="battery"></img>
+                         </div>
+                         <div className="graf"></div>
+                    </div>
+               </div>
+          </section>
+     </main>
+    </>
   );
 }
