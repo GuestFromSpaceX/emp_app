@@ -1,4 +1,8 @@
 import './page.css';
+import Image from 'next/image';
+import magnifyingGlass from '../../public/magnifying-glass.svg';
+import b from '../../public/.svg';
+import m from '../../public/.svg';
 
 export default function Dashboard() {
     return (
@@ -7,7 +11,7 @@ export default function Dashboard() {
     <header className="header">
         <div className="header__container">
             <div className="header__back">
-                <img className="header__back_arrow" src="./imgs/arrow_back.svg" alt=""></img>
+                <Image className="header__back_arrow" src="./imgs/arrow_back.svg" alt=""/>
                 <button className="header__home_button">
                     Главная
                 </button>
@@ -16,7 +20,7 @@ export default function Dashboard() {
                 <input className="header__search_input"
                        type="search"
                        placeholder="Поиск по группам" />
-                <img className="header__search_img" src="./imgs/search.svg"/>
+                <Image className="header__search_img" src={magnifyingGlass} alt='лупа'/>
             </div>
         </div>
     </header>
@@ -30,15 +34,15 @@ export default function Dashboard() {
                             <input className="main__search_input"
                                    type="search"
                                    placeholder="Поиск по растениям" />
-                            <img className="main__search_img" src="./imgs/search.svg"/>
+                            <Image className="main__search_img" src={magnifyingGlass} alt='лупа'/>
                         </div>
                         <div className="main__add">
-                            <img className="main__plus" src="./imgs/plus.svg" alt="добавить растение"/>
+                            <Image className="main__plus" src="./imgs/plus.svg" alt="добавить растение"/>
                         </div>
-                        <img className="main__show" src="./imgs/arrow_show_down.svg" alt="развернуть группу"/>
+                        <Image className="main__show" src="./imgs/arrow_show_down.svg" alt="развернуть группу"/>
                     </div>
                     <div className="main__block_right">
-                        <img className="main__delete" src="./imgs/delete.svg" alt="удалить группу"/>
+                        <Image className="main__delete" src="./imgs/delete.svg" alt="удалить группу"/>
                     </div>
                 </div>
                 <section className="dashboard">
@@ -51,12 +55,12 @@ export default function Dashboard() {
                                 Возникшие проблемы
                             </button>
                             <div className="dashboard__calendar">
-                                <img className="calendar" src="./imgs/calendar.svg" alt="календарь"/>
+                                <Image className="calendar" src="./imgs/calendar.svg" alt="календарь"/>
                             </div>
-                            <img className="dashboard__show" src="./imgs/arrow_show_up.svg" alt="свернуть дашборд"/>
+                            <Image className="dashboard__show" src="./imgs/arrow_show_up.svg" alt="свернуть дашборд"/>
                         </div>
                         <div className="dashboard__header_right">
-                            <img className="dashboard__delete" src="./imgs/delete.svg" alt="удалить дашборд"/>
+                            <Image className="dashboard__delete" src="./imgs/delete.svg" alt="удалить дашборд"/>
                         </div>
                     </div>
                     <div className="dashboard__blocks">
@@ -69,7 +73,7 @@ export default function Dashboard() {
                                     772Lux
                                 </div>
                                 <div className="block__emotion">
-                                    <img className="" src="./imgs/emoji_sick.png" alt=""/>
+                                    <Image className="" src="./imgs/emoji_sick.png" alt=""/>
                                 </div>
                                 <div className="block__radio">
                                     <label>
@@ -103,7 +107,7 @@ export default function Dashboard() {
                                     772Lux
                                 </div>
                                 <div className="block__emotion">
-                                    <img className="" src="./imgs/emoji_sick.png" alt=""/>
+                                    <Image className="" src="./imgs/emoji_sick.png" alt=""/>
                                 </div>
                                 <div className="block__radio">
                                     <label>
@@ -137,7 +141,7 @@ export default function Dashboard() {
                                     772Lux
                                 </div>
                                 <div className="block__emotion">
-                                    <img className="" src="./imgs/emoji_sick.png" alt=""/>
+                                    <Image className="" src="./imgs/emoji_sick.png" alt=""/>
                                 </div>
                                 <div className="block__radio">
                                     <label>
@@ -171,7 +175,7 @@ export default function Dashboard() {
                                     772Lux
                                 </div>
                                 <div className="block__emotion">
-                                    <img className="" src="./imgs/emoji_sick.png" alt=""/>
+                                    <Image className="" src="./imgs/emoji_sick.png" alt=""/>
                                 </div>
                                 <div className="block__radio">
                                     <label>
