@@ -347,6 +347,13 @@ body {
     background-color: #D7EADD;
 }
 
+.block__graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 275px;
+}
+
 /*BLOCK DASHBOARD^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 .section {

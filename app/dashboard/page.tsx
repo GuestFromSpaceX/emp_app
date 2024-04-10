@@ -1,4 +1,11 @@
+'use client';
 
+import React from 'react';
+
+import "chart.js/auto";
+import defaults, { Chart } from 'chart.js/auto';
+
+import { Line } from "react-chartjs-2";
 
 import './page.css';
 import Image from 'next/image';
@@ -11,6 +18,7 @@ import arrowShowUp from '../../public/dashboard/arrow_show_up.svg';
 import calendar from '../../public/dashboard/calendar.svg';
 import emojiSick from '../../public/dashboard/emoji_sick.png';
 import m from '../../public/dashboard/.svg';
+
 
 export default function Dashboard() {
     return (
@@ -85,7 +93,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="block__radio">
                                     <label>
-                                        <input id='radio-1' className="day" name="radio" type="radio" checked/>
+                                        <input id='radio-1' className="day" name="radio" type="radio" />
                                         <div className="block__castom-radio radio-1">
                                             День
                                         </div> 
@@ -104,7 +112,31 @@ export default function Dashboard() {
                                     </label>
                                 </div>
                             </div>
-                            <div className="block__graph"></div>
+                            <div className="block__graph" id='myChart'> 
+                                <Line data={{
+                                        labels: ['1 января', '2 января', '3 января', '4 января'],
+                                        datasets: [{
+                                            label: 'My First Dataset',
+                                            data: [65, 59, 80, 81, 56, 55, 40],
+                                            fill: false,
+                                            borderColor: 'rgb(73, 133, 83)',
+                                            tension: 0.4
+                                        }],
+                                            }}
+                                        options={{
+                                            responsive: true,
+                                            maintainAspectRatio: true,
+                                            plugins: {
+                                                legend: {
+                                                    display: false,
+                                                    labels: {
+                                                        //color: 'rgb(255, 99, 132)'
+                                                    }
+                                                }
+                                            }
+                                        }}>
+                                </Line>
+                            </div>
                         </div>
                         <div className="block">
                             <div className="block__header">
@@ -119,7 +151,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="block__radio">
                                     <label>
-                                        <input id='radio-1' className="day" name="radio1" type="radio" checked/>
+                                        <input id='radio-1' className="day" name="radio1" type="radio" />
                                         <div className="block__castom-radio radio-1">
                                             День
                                         </div> 
@@ -153,7 +185,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="block__radio">
                                     <label>
-                                        <input id='radio-1' className="day" name="radio2" type="radio" checked/>
+                                        <input id='radio-1' className="day" name="radio2" type="radio" />
                                         <div className="block__castom-radio radio-1">
                                             День
                                         </div> 
@@ -187,7 +219,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="block__radio">
                                     <label>
-                                        <input id='radio-1' className="day" name="radio3" type="radio" checked/>
+                                        <input id='radio-1' className="day" name="radio3" type="radio"/>
                                         <div className="block__castom-radio radio-1">
                                             День
                                         </div> 
@@ -222,6 +254,10 @@ export default function Dashboard() {
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+ 
+    </script>
 </body>
     </>    
     ) }
