@@ -1,10 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import "chart.js/auto";
 import defaults, { Chart } from 'chart.js/auto';
-
 import { Line } from "react-chartjs-2";
 
 import './page.css';
@@ -20,7 +19,21 @@ import emojiSick from '../../public/dashboard/emoji_sick.png';
 import m from '../../public/dashboard/.svg';
 
 
+
 export default function Dashboard() {
+
+    const [flagGroupe, setFlagGroupe] = useState(false)
+    const [flagBlock, setFlagBlock] = useState(false)
+
+    function changeImage() {
+        setFlagGroupe(!flagGroupe);
+    }
+
+    function changeImage2() {
+        setFlagBlock(!flagBlock);
+    }
+    
+
     return (
     <>
     <body>
@@ -55,13 +68,14 @@ export default function Dashboard() {
                         <div className="main__add">
                             <Image className="main__plus" src={plus} alt="добавить растение"/>
                         </div>
-                        <Image className="main__show" src={arrowShowDown} alt="развернуть группу"/>
+                            <Image className={"main__show"} src={ flagGroupe ? arrowShowUp : arrowShowDown } alt="развернуть группу" onClick={changeImage}/>
+                        
                     </div>
                     <div className="main__block_right">
                         <Image className="main__delete" src={deleteDashboard} alt="удалить группу"/>
                     </div>
                 </div>
-                <section className="dashboard">
+                <section className={ flagGroupe ? "dashboard" : "dashboard--hidden"}>
                     <div className="dashboard__container">
                     <div className="dashboard__header">
                         <div className="dashboard__header_left">
@@ -73,13 +87,13 @@ export default function Dashboard() {
                             <div className="dashboard__calendar">
                                 <Image className="calendar" src={calendar} alt="календарь"/>
                             </div>
-                            <Image className="dashboard__show" src={arrowShowUp} alt="свернуть дашборд"/>
+                            <Image className="dashboard__show" src={ flagBlock ? arrowShowUp : arrowShowDown} alt="свернуть дашборд" onClick={changeImage2}/>
                         </div>
                         <div className="dashboard__header_right">
                             <Image className="dashboard__delete" src={deleteDashboard} alt="удалить дашборд"/>
                         </div>
                     </div>
-                    <div className="dashboard__blocks">
+                    <div className={flagBlock ? "dashboard__blocks" : "dashboard__blocks--hidden"}>
                         <div className="block">
                             <div className="block__header">
                                 <div className="block__title">
@@ -256,7 +270,7 @@ export default function Dashboard() {
     </section>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
- 
+        
     </script>
 </body>
     </>    

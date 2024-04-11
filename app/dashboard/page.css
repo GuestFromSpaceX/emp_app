@@ -188,6 +188,12 @@ body {
 .dashboard {
     align-self: center;
     margin: 0 0 10px 0;
+    transition: 1s;
+}
+
+.dashboard--hidden {
+    display: none;
+    transition: 1s;
 }
 
 .dashboard__container {
@@ -271,6 +277,11 @@ body {
     gap: 40px;
     display: flex;
     justify-content: center;
+}
+
+.dashboard__blocks--hidden {
+    display: none;
+    height: auto;
 }
 
 .block {
