@@ -3,7 +3,6 @@
 import React from 'react';
 
 import "chart.js/auto";
-import defaults, { Chart } from 'chart.js/auto';
 
 import { Line } from "react-chartjs-2";
 
